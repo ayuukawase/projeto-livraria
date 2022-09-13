@@ -1,13 +1,11 @@
 /* Import font from google */
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
-
-* {
+*{
    margin: 0;
    padding: 0;
    box-sizing: border-box;
 }
 body{
-   width: 100%;
    background-color: rgb(200,200,200);
    font-family: sans-serif;
    margin: 0;
@@ -20,30 +18,22 @@ h1,h2,h3,h4,h5,h6{
    width: 100%;
    margin:0 auto;
 }
-/*********************TOPO*************/
 #topo h1{
    padding: 20px 0;
 }
-#topo h2 {
+#topo h2{
    display: none;
 }
-/*******MENU**********/
 #menu li{
    display:inline;
 }
-#menu ul {
+#menu ul{
    width: 80%;
    margin: 0 auto;
    padding-bottom: 20px;
 }
-/*******DESTAQUES*******/
-.destaques h2 {
+.destaques h2{
    text-align: center;
-}
-#menu ul {
-   width: 80%;
-   margin: 0 auto;
-   padding-bottom: 20px;
 }
 .destaques li{
    width: 100%;
@@ -101,7 +91,9 @@ button{
    -moz-border-radius: 5px;
    border-radius: 5px;
 }
-/**************FOOTER********/
+img{
+   width: 60%;
+}
 #rodape{
    width: 100%;
    background-color: #333;
@@ -109,45 +101,94 @@ button{
    float: left;
    text-align: center;
 }
-#rodape ul {
+#rotape ul{
    padding: 20px 0;
 }
-#rodape li {display: inline;
+#rodape li {
+   display: inline;
 }
 
-/****************************MEDIA QUERY********************/
-@media (min-width: 576px) {
-   /*********TOPO*******/
+/***********************Media Query********************/
+@media (min-width: 576px){
+   #topo h2{
+      display: block;
+      font-size: 1.2em;
+      padding: 20px;
+   }
+   .destaques li{
+      width: 50%;
+      float: left;
+      text-align: center;
+      list-style: none;
+      padding: 20px 0;
+   }
+   section{
+      margin-left: 20%;
+      padding: 2%;
+      width: 100%;
+   }
+   legend{
+      margin-left: -20%;
+   }
+   div{
+      width: 100%;
+   }
+   .m{
+      clear: left;
+   }
+   #rotape{
+      width: 100%;
+   }
+
+   /***********************Media Query********************/
+@media (min-width: 768px){
    #topo h1{
-      animation:introducao 2s linear infinite alternate;
-      -webkit-animation:introducao 2s linear infinite alternate;
-      -moz-animation:introducao 2s linear infinite alternate;
+      font-size: 3em;
    }
-   @-webkit-keyframes introducao{
-      0%{color: red; -webkit-transform:rotate(0deg);}
-      25%{color: blue; -webkit-transform:rotate(5deg) scale(1.2);}
-      50%{color: green; -webkit-transform:rotate(0deg);}
-      75%{color: purple; -webkit-transform:rotate(-5deg) scale(1.2);}
-      100%{color: red; -webkit-transform:rotate(0deg);}
+   #topo h2{
+      display: block;
+      font-size: 1.5em;
+      padding: 20px;
    }
-   @keyframes introducao{
-      0%{color: red; -webkit-transform:rotate(0deg);}
-      25%{color: blue; -webkit-transform:rotate(5deg) scale(1.2);}
-      50%{color: green; -webkit-transform:rotate(0deg);}
-      75%{color: purple; -webkit-transform:rotate(-5deg) scale(1.2);}
-      100%{color: red; -webkit-transform:rotate(0deg);}
-}
-#topo h2 {
-   display: block;
-   font-size: 1.2em;
-   padding: 20px 0;
-}
-/***********DESTAQUE**********/
-.destaques li{
-   width: 50%;
-   float: left;
-   text-align: center;
-   list-style: none;
-   padding: 20px 0;
+   .destaques li{
+      width: 50%;
+      float: left;
+      text-align: center;
+      list-style: none;
+      padding: 20px 0;
+   }
+   #menu ul{
+      width: 90%;
+      margin: 0 auto;
+      padding-bottom: 20px;
+   }
+   #menu li{
+      font-size: 1em;
+      padding-left: 1%;
+      padding-right: 1%;
+   }
+   section{
+      margin-left: 20%;
+      padding: 2%;
+      width: 100%;
+   }
+   legend{
+      margin-left: -20%;
+   }
+   div{
+      width: 100%;
+   }
+   .m{
+      clear: left;
+   }
+   form div{
+      width: 70%;
+      margin: 0 1%;
+      height: 180px;
+      float: left;
+   }
+   #rotape{
+      width: 100%;
+   }
 }
 }
